@@ -133,9 +133,14 @@ the element with your mouse, the title attribute is displayed in a little box ne
 
 </div>
 
-<script src="jquery.js"></script>
-<script src="jquery-ui.js"></script>
-<script>
+//<script src="jquery.js"></script>
+//<script src="jquery-ui.js"></script>
+//<script src="jquery-ui.js"></script>
+
+<script src="jquery-1.11.3.min.js"></script>
+<script src="jquery.dataTables.min.js"></script>
+<script src="dataTables.jqueryui.min.js"></script>
+
 
 $( "#accordion" ).accordion();
 
@@ -150,6 +155,19 @@ $( "#dialog-link, #icons li" ).hover(
 		$( this ).removeClass( "ui-state-hover" );
 	}
 );
+
+$(document).ready(function() {
+    $('#procs_table').DataTable( {
+        "processing": true,
+        "serverSide": true,
+        "ajax": "../procs",
+        "scrollY":        "200px",
+        "scrollCollapse": true,
+        "paging":         false        
+    } );
+} );
+
+
 </script>
 </body>
 </html>
