@@ -1,4 +1,4 @@
-openshift-jee-sample
+jdemo
 ====================
 
 A sample app to be deployed on openshift environments
