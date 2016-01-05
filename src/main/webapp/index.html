@@ -82,7 +82,16 @@
 	</div>
 	<h3>Environment</h3>
 	<div>
-		<p>env</p>
+
+		<table id="env_table" class="display" cellspacing="0" width="100%">
+		        <thead>
+		            <tr>
+		                <th>Key</th>
+		                <th>Value</th>
+		            </tr>
+		        </thead>
+		</table>
+
 	</div>
 	<h3>Processes</h3>
 	<div>
@@ -158,7 +167,8 @@ $( "#dialog-link, #icons li" ).hover(
 );
 
 $(document).ready(function() {
-    $('#procs_table').DataTable( {
+    $('#env_table').DataTable( {
+    	"sDom": '<"top"i>rt<"bottom"lp><"clear">',
         "processing": true,
         "serverSide": true,
         "ajax": "../procs",
