@@ -152,35 +152,32 @@ the element with your mouse, the title attribute is displayed in a little box ne
 <script src="jquery.dataTables.min.js"></script>
 <script src="dataTables.jqueryui.min.js"></script>
 <script>
-
-$( "#accordion" ).accordion();
-
-$( "#tooltip" ).tooltip();
-
-// Hover states on the static widgets
-$( "#dialog-link, #icons li" ).hover(
-	function() {
-		$( this ).addClass( "ui-state-hover" );
-	},
-	function() {
-		$( this ).removeClass( "ui-state-hover" );
-	}
-);
-
-
-$(document).ready(function() {
-    $('#env_table').DataTable( {
-    	"sDom": '<"top"i>rt<"bottom"lp><"clear">',
-        "processing": true,
-        "serverSide": true,
-        "ajax": "../procs",
-        "scrollY":        "200px",
-        "scrollCollapse": true,
-        "paging":         false        
-    } );
-} );
-
-
+	$( "#accordion" ).accordion();
+	
+	$( "#tooltip" ).tooltip();
+	
+	// Hover states on the static widgets
+	$( "#dialog-link, #icons li" ).hover(
+		function() {
+			$( this ).addClass( "ui-state-hover" );
+		},
+		function() {
+			$( this ).removeClass( "ui-state-hover" );
+		}
+	);
+	
+	$(document).ready(function() {
+	    $('#example').DataTable( {
+	    	"sDom": '<"top"i>rt<"bottom"lp><"clear">',
+	        "processing": true,
+	        "serverSide": true,
+	        "ajax": "../procs",
+	        "scrollY":        "200px",
+	        "scrollCollapse": true,
+	        "paging":         false        
+	    } );
+	} );
 </script>
+
 </body>
 </html>
